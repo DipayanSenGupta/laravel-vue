@@ -7,11 +7,11 @@
   <title>Vuebnb</title>
   <link rel="stylesheet" href="node_modules/open-sans-all/css/open-sans.css">
   <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.css">
-  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="{{'css/style.css'}}" type="text/css">
 </head>
 <body>
 <div id="toolbar">
-  <img class="icon" src="logo.png">
+  <img class="icon" src="{{asset('images/logo.png')}}">
   <h1>vuebnb</h1>
 </div>
 <div id="app">
@@ -62,7 +62,7 @@
   		&times;
   	</button>
   	<div class="modal-content">
-  		<img src="sample/header.jpg">
+  		<img src="{{asset('images/header.jpg')}}">
   	</div>
   </div>
 </div>

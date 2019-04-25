@@ -1,3 +1,4 @@
+require('dotenv').config();
 const mix = require('laravel-mix');
 
 /*
@@ -11,4 +12,15 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js');
+mix.browserSync({
+			 proxy: process.env.APP_URL,
+			 open:flase})
+			.js('resources/js/app.js', 'public/js')
+			.styles([
+									'resources/css/style.css', 
+									'node_modules/open-sans-all/css/open-sans.css',
+									'node_modules/font-awesome/css/font-awesome.css'
+							],'public/css/style.css')
+.copy('node_modules/open-sans-all/fonts', 'public/fonts')
+.copy('node_modules/font-awesome/fonts', 'public/fonts')
+.copy('resources/images', 'public/images');

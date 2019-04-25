@@ -12573,7 +12573,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
     prices: _data__WEBPACK_IMPORTED_MODULE_0__["default"].prices,
     amenities: _data__WEBPACK_IMPORTED_MODULE_0__["default"].amenities,
     headerImageStyle: {
-      'background-image': 'url(sample/header.jpg)'
+      'background-image': 'url(/images/header.jpg)'
     },
     contracted: true,
     modalOpen: false
