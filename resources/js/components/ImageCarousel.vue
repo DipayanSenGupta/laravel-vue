@@ -8,6 +8,8 @@
     </div>
 </template>
 <script type="text/javascript">
+import CarouselControl from './CarouselControl.vue';
+
 	export default {
 props: ['images'],  
   data(){
@@ -34,22 +36,9 @@ props: ['images'],
     }
   },
   components: {
-    'carousel-control': {
-      template: `<i :class="classes" @click="clicked"></i>`,
-      props:['dir'],
-      computed: {
-        classes() {
-          return 'carousel-control fa fa-2x fa-chevron-'+ this.dir;
-        }
-      },
-      methods: {
-        clicked() {
-          this.$emit('change-image', this.dir === 'left' ?-1:1);
-        }
-      }
-    }
-  }
+    CarouselControl
 	}
+}
 </script>
 <style type="text/css">
 	
@@ -70,5 +59,5 @@ props: ['images'],
 .image-carousel img {
 max-width: 100%;
 }
-	
+
 </style>

@@ -14,7 +14,8 @@ const mix = require('laravel-mix');
 
 mix.browserSync({
 			 proxy: process.env.APP_URL,
-			 open:false})
+			 open:false,
+				port:8000})
 			.js('resources/js/app.js', 'public/js')
 			.styles([
 									'resources/css/style.css', 
