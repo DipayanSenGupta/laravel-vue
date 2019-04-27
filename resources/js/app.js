@@ -1,10 +1,11 @@
 import "core-js/features/object/assign";
 import Vue from 'vue';
 import { populateAmenitiesAndPrices } from './helpers';
-import ImageCarousel from './components/ImageCarousel.vue';
-import ModalWindow from './components/ModalWindow.vue';
-import HeaderImage from './components/HeaderImage.vue';
-import FeatureList from './components/FeatureList.vue';
+import ImageCarousel from '../components/ImageCarousel.vue';
+import ModalWindow from '../components/ModalWindow.vue';
+import HeaderImage from '../components/HeaderImage.vue';
+import FeatureList from '../components/FeatureList.vue';
+import ExpandableText from '../components/ExpandableText.vue' 
 // console.log(window.vuebnb_listing_model);
 
 let model = JSON.parse(window.vuebnb_listing_model);
@@ -24,7 +25,8 @@ var app = new Vue({
     HeaderImage,
     ImageCarousel,
     ModalWindow,
-    FeatureList
+    FeatureList,
+    ExpandableText
   },
   methods: {
     openModal() {
