@@ -1,36 +1,7 @@
-import "core-js/features/object/assign";
 import Vue from 'vue';
-import { populateAmenitiesAndPrices } from './helpers';
-import ImageCarousel from '../components/ImageCarousel.vue';
-import ModalWindow from '../components/ModalWindow.vue';
-import HeaderImage from '../components/HeaderImage.vue';
-import FeatureList from '../components/FeatureList.vue';
-import ExpandableText from '../components/ExpandableText.vue' 
-// console.log(window.vuebnb_listing_model);
-
-let model = JSON.parse(window.vuebnb_listing_model);
-model = populateAmenitiesAndPrices(model);
-// console.log(model);
-
-
-var app = new Vue({
+import ListingPage from '../components/ListingPage.vue';
+import "core-js/features/object/assign";
+var app = new Vue ({
   el: '#app',
-  data: Object.assign(model, {
-    // headerImageStyle: {
-    //   'background-image': `url(${model.images[0]})`
-    // },
-    contracted: true
-  }),
-  components: {
-    HeaderImage,
-    ImageCarousel,
-    ModalWindow,
-    FeatureList,
-    ExpandableText
-  },
-  methods: {
-    openModal() {
-      this.$refs.imagemodal.modalOpen = true;
-    }
-  }
+  render: h => h(ListingPage) 
 });
