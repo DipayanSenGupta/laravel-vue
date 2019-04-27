@@ -13,10 +13,7 @@
 </head>
 <body>
 
-<div id="toolbar">
-  <img class="icon" src="{{asset('images/logo.png')}}">
-  <h1>vuebnb</h1>
-</div>
+
 
 <div id="app">
   <listing></listing>
@@ -24,7 +21,7 @@
 
 <script type="text/javascript">
   {{-- console.log(($model)); --}}
-  window.vuebnb_listing_model = "{!! addslashes(json_encode($model)) !!}";
+  window.vuebnb_server_data = "{!! addslashes(json_encode($data)) !!}"
 </script>
 <script src="{{ asset('js/app.js') }}"></script></body>
 </html>
