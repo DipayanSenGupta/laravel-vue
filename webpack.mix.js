@@ -27,4 +27,11 @@ mix.browserSync({
 .copy('resources/images', 'public/images')
 .options({
 		extractVueStyles:'public/css/vue-style.css'
+})
+.webpackConfig({
+	resolve: {
+		alias:{
+			'vue$': 'vue/dist/vue.runtime.esm.js'
+		}
+	}
 });
