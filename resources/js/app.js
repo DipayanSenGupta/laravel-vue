@@ -17,10 +17,16 @@ var app = new Vue({
       'background-image': `url(${model.images[0]})`
     },
     contracted: true,
+    modalOpen: false 
     // modalOpen: false
   }),
   components: {
     ImageCarousel,
     ModalWindow
+  },
+  methods: {
+    openModal() {
+      this.$refs.imagemodal.modalOpen = true;
+    }
   }
 });

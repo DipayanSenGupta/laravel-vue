@@ -14010,12 +14010,18 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
     headerImageStyle: {
       'background-image': "url(".concat(model.images[0], ")")
     },
-    contracted: true // modalOpen: false
+    contracted: true,
+    modalOpen: false // modalOpen: false
 
   }),
   components: {
     ImageCarousel: _components_ImageCarousel_vue__WEBPACK_IMPORTED_MODULE_3__["default"],
     ModalWindow: _components_ModalWindow_vue__WEBPACK_IMPORTED_MODULE_4__["default"]
+  },
+  methods: {
+    openModal: function openModal() {
+      this.$refs.imagemodal.modalOpen = true;
+    }
   }
 });
 

@@ -20,8 +20,7 @@
 
 <div id="app">
   <div class="header">
-    <div class="header-img" v-bind:style="headerImageStyle"
-       v-on:click="modalOpen=true"> 
+    <div class="header-img" v-bind:style="headerImageStyle" v-on:click= "openModal"> 
       <button class="view-photos">View Photos</button>
     </div>
   </div>
@@ -61,7 +60,7 @@
         </div>
     </div>
   </div>
-  <modal-window>
+  <modal-window ref="imagemodal">
     <image-carousel :images="images"></image-carousel>
   </modal-window>
 </div>
