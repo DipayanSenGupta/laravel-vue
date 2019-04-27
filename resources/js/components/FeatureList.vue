@@ -3,6 +3,9 @@
   <div class="title">
     <strong>{{ title }}</strong></div>
     <div class="content">
+    	<div class="list-item" v-for="item in items">
+    		<slot v-bind="item"></slot>	
+    	</div>
     	<slot></slot>
     </div>
   </div>
@@ -10,7 +13,7 @@
 
 <script type="text/javascript">
 	export default {
-		props: ['title']
+		props: ['title','items']
 	}
 </script>
 

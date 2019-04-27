@@ -34,17 +34,17 @@
     </div>
     <div class="lists">
       <hr>
-      <feature-list title="Amenities">
-        <div class="list-item" v-for="amenity in amenities">
+      <feature-list title="Amenities" :items="amenities">
+        <template slot-scope="amenity">
           <i class="fa fa-lg" :class="amenity.icon"></i>
           <span>@{{  amenity.title }}</span>
-        </div>
+        </template>
       </feature-list>  
         <hr>
-       <feature-list title="Prices">
-        <div class="list-item" v-for="price in prices">
-          @{{ price.title }}: <strong>@{{price.value}}</strong>
-        </div>
+       <feature-list title="Prices" :items="prices">
+        <template slot-scope="price">
+          @{{ price.title }}: <strong>@{{price.value}}</strong>          
+        </template>
        </feature-list> 
     </div>
   </div>
