@@ -14007,12 +14007,10 @@ model = Object(_helpers__WEBPACK_IMPORTED_MODULE_2__["populateAmenitiesAndPrices
 var app = new vue__WEBPACK_IMPORTED_MODULE_1___default.a({
   el: '#app',
   data: Object.assign(model, {
-    headerImageStyle: {
-      'background-image': "url(".concat(model.images[0], ")")
-    },
-    contracted: true,
-    modalOpen: false // modalOpen: false
-
+    // headerImageStyle: {
+    //   'background-image': `url(${model.images[0]})`
+    // },
+    contracted: true
   }),
   components: {
     ImageCarousel: _components_ImageCarousel_vue__WEBPACK_IMPORTED_MODULE_3__["default"],

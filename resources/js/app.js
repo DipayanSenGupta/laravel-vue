@@ -13,12 +13,10 @@ model = populateAmenitiesAndPrices(model);
 var app = new Vue({
   el: '#app',
   data: Object.assign(model, {
-    headerImageStyle: {
-      'background-image': `url(${model.images[0]})`
-    },
-    contracted: true,
-    modalOpen: false 
-    // modalOpen: false
+    // headerImageStyle: {
+    //   'background-image': `url(${model.images[0]})`
+    // },
+    contracted: true
   }),
   components: {
     ImageCarousel,
