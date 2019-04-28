@@ -8,5 +8,10 @@ export default new VueRouter({
 	routes: [
 		{path:'/',component: HomePage, name: 'home' },
 		{path: '/listing/:listing',component: ListingPage, name: 'listing'}
-	]
+	],
+	scrollBehavior(to,from,savedPositoin){
+		return {
+					x:0,y:0
+				}
+	}
 });

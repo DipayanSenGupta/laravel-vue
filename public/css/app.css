@@ -23,14 +23,25 @@ font-size: 15px;
 color: #767676;
 }
 
+
+
+.listing-container {
+margin: 0 auto;
+padding: 0 12px;}
 @media (min-width: 744px) {
-  .container {
-    width: 696px;
-  }
+.listing-container {
+width: 696px;
 }
-
-
-
+}
+.home-container {
+margin: 0 auto;
+padding: 0 25px;
+}
+@media (min-width: 1131px) {
+.home-container {
+width: 1080px;
+}
+}
 /* open-sans-300 - cyrillic_cyrillic-ext_vietnamese_latin-ext_greek-ext_latin_greek */
 @font-face {
   font-family: 'Open Sans';

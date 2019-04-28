@@ -1,8 +1,10 @@
 <template>
 	<div>
-  <header-image :image-url="images[0]" @header-clicked="openModal">
+  <header-image 
+  v-if="images[0]"
+  :image-url="images[0]" @header-clicked="openModal">
   </header-image>
-  <div class="container">    
+  <div class="listing-container">    
     <div class="heading">
       <h1>{{	title	}}</h1>
       <p>{{ address }}</p>
