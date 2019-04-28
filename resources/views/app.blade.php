@@ -20,8 +20,9 @@
 </div>
 
 <script type="text/javascript">
-  {{-- console.log(($model)); --}}
+  // console.log(($data));
   window.vuebnb_server_data = "{!! addslashes(json_encode($data)) !!}"
+  // console.log(window.vuebnb_server_data);
 </script>
 <script src="{{ asset('js/app.js') }}"></script></body>
 </html>

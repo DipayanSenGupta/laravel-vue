@@ -1,24 +1,19 @@
 <template>
 	<div class="home-container">
-		<div v-for = "(group,country) in listing_groups" class="listing-summary-group">
-			<h1>Places in {{ country }}</h1>
-			<div>
-				<div class="listing-summaries">
-					<listing-summary
-						v-for="listing in group"
-						:key="listing.id"
-						:listing="listing"
+					<listing-summary-group
+						v-for="(group, country) in listing_groups"
+						:key="country"
+						:listings="group"
+						:country="country"
+						class="listing-summary-group"
 					>	
-					</listing-summary>	
-				</div>
-			</div>
-		</div>
+					</listing-summary-group>	
 	</div>
 </template>
 
 <script type="">
 	import {groupByCountry} from '../js/helpers';
-	import ListingSummary from './ListingSummary.vue';
+	import ListingSummaryGroup from './ListingSummaryGroup.vue';
 	import axios from 'axios';
 	import routeMixin from '../js/routeMixin';
 export default {
@@ -31,10 +26,11 @@ listing_groups: []
 methods: {
 assignData({ listings }) {
 this.listing_groups = groupByCountry(listings);
+// console.log(this.listing_groups);
 },
 },
 components: {
-ListingSummary
+ListingSummaryGroup
 },
 
 beforeRouteEnter (to, from, next) {
@@ -73,3 +69,5 @@ margin-right: 15px;
 margin-right: 0;
 }
 </style>
+
+s
